@@ -1,88 +1,104 @@
-.sectionContainer{
+.sectionContainer {
     margin-top: 50px;
     display: flex;
     flex-direction: row;
-    width: var(--ifm-container-width-xl);
+    width: 100%;
+    max-width: 860px;
     align-items: center;
-    gap: 40px;
+    gap: 48px;
 }
 
-.sectionContainer img{
-    border-radius: 50% 5% 50% 5%;
-    max-width: 28%;
+.sectionContainer img {
+    border-radius: 50% 2% 50% 2%;
+    max-width: 35%;
+    object-fit: cover;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    flex-shrink: 0;
 }
 
-.pageTitle{
-    margin-top: 0px;
-    margin-bottom: 10px;
-    text-align: center;
-    letter-spacing: -2px;
-    font-size: 3rem;
-  }
-
-.mainContainer{
-    max-width: 100%;
-}
-
-.profileText{
-    align-items: center;
+.profileText {
     display: flex;
     flex-direction: column;
     flex: 1;
-    height: 100%;
+    gap: 12px;
+}
+
+.greeting {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin: 0 0 4px 0;
 }
 
 .paragraph {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    max-width: 90%;
-    text-align: center;
+    text-align: left;
 }
 
 .paragraph p {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
-.buttonSep{
-    gap: 20px;
+.tagline {
+    margin-top: 18px;
+    color: var(--pageHeader-color-text);
+    font-size: 0.95rem;
+}
+
+.buttonSep {
+    gap: 12px;
     display: flex;
+    margin-top: 0px;
 }
 
-.buttonLike{
-    font-weight: bold;
-    border-radius: 25px;
-    padding: 10px 30px 10px 30px;
-    background-color: var(--image-overlay-1);
+.buttonLike {
+    font-weight: 600;
+    border-radius: var(--border-radius-button);
+    padding: 9px 26px;
+    background-color: var(--color-surface);
     border-color: var(--ifm-color-primary);
     border-width: 2px;
     border-style: solid;
     font-family: var(--ifm-font-family-base);
-    color: var(--imf--color-nav-icons);
-} 
-
-.subscribeButtonLike{
-    background-color: var(--ifm-color-primary);
-    color: var(--image-overlay-2);
+    color: var(--color-nav-icons);
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.buttonLike:hover{
+.buttonLike:hover {
     text-decoration: none !important;
-} 
-
-.subscribeButtonLike:hover{
-    color: var(--color-subscribe-btn-hover);
+    background-color: var(--ifm-color-primary-lightest);
 }
 
+.subscribeButtonLike {
+    background-color: var(--ifm-color-primary);
+    color: var(--color-surface-soft);
+}
+
+.subscribeButtonLike:hover {
+    background-color: var(--ifm-color-primary-dark);
+    color: var(--color-surface-soft);
+}
+
+@media screen and (max-width: 768px) {
+    .sectionContainer {
+        gap: 28px;
+    }
+
+    .sectionContainer img {
+        max-width: 38%;
+    }
+}
 
 @media screen and (max-width: 450px) {
     .sectionContainer {
         flex-direction: column;
-        width: var(--ifm-container-width-s);
+        gap: 20px;
     }
 
-    .sectionContainer img{
-        border-radius: 50% 5% 50% 5%;
-        max-width: 60%;
+    .sectionContainer img {
+        border-radius: 50% 2% 50% 2%;
+        max-width: 65%;
     }
 }

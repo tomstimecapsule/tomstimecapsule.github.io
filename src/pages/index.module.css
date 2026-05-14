@@ -1,83 +1,13 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-/* main {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-} */
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mainBreak {
-  color: gray;
-  width: var(--ifm-container-width-xl);
-}
-
-.galleryGrid {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-
-.mainContainer{
+.mainContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.pageTitle{
-  margin-top: 50px;
-  margin-bottom: 10px;
+.pageDescription {
   text-align: center;
-  letter-spacing: -2px;
-  font-size: 3rem;
-}
-
-.pageDescription{
-  text-align: center;
-  margin-top: 10px;
-}
-
-
-.galleryTitle {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 600;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  letter-spacing: -2px;
-}
-
-@media screen and (max-width: 450px) {
-  .galleryTitle {
-    font-size: 2.6rem;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    line-height: 40px;
-    letter-spacing: -2px;
-  }
+  margin-top: 6px;
+  color: var(--pageHeader-color-text);
+  margin-bottom: 2rem;
 }

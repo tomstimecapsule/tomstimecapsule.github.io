@@ -2,20 +2,20 @@ import React from "react";
 import styles from "./imageGallery.module.css"; // CSS for styling the gallery
 import { FaInstagram } from "react-icons/fa"; // Import Instagram icon
 
-import image01 from '@site/static/img/gallery/image-01.jpg';
-import image02 from '@site/static/img/gallery/image-02.jpg';
-import image03 from '@site/static/img/gallery/image-03.jpg';
-import image04 from '@site/static/img/gallery/image-04.jpg';
-import image06 from '@site/static/img/gallery/image-06.jpg';
-import image08 from '@site/static/img/gallery/image-08.jpg';
-import image09 from '@site/static/img/gallery/image-09.jpg';
-import image11 from '@site/static/img/gallery/image-11.jpg';
-import image12 from '@site/static/img/gallery/image-12.jpg';
-import image13 from '@site/static/img/gallery/image-13.jpg';
-import image14 from '@site/static/img/gallery/image-14.jpg';
-import image15 from '@site/static/img/gallery/image-15.jpg';
-import image16 from '@site/static/img/gallery/image-16.jpg';
-import image17 from '@site/static/img/gallery/image-17.jpg';
+import image01 from '@site/static/img/gallery/gallery-1.png';
+import image02 from '@site/static/img/gallery/gallery-2.png';
+import image03 from '@site/static/img/gallery/gallery-3.png';
+import image04 from '@site/static/img/gallery/gallery-4.png';
+import image06 from '@site/static/img/gallery/gallery-6.png';
+import image08 from '@site/static/img/gallery/gallery-8.png';
+import image09 from '@site/static/img/gallery/gallery-9.png';
+import image11 from '@site/static/img/gallery/gallery-11.png';
+import image12 from '@site/static/img/gallery/gallery-12.png';
+import image13 from '@site/static/img/gallery/gallery-13.png';
+import image14 from '@site/static/img/gallery/gallery-14.png';
+import image15 from '@site/static/img/gallery/gallery-15.png';
+import image16 from '@site/static/img/gallery/gallery-16.png';
+import image17 from '@site/static/img/gallery/gallery-17.png';
 
 
 const images = [

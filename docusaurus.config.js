@@ -79,7 +79,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/social_16_9.jpg',
       metadata: [
-        {name: 'keywords', content: 'photography journal, blog, toms time capsule'},
+        {name: 'keywords', content: "photography journal, blog, tom's time capsule"},
         {name: 'twitter:card', content: 'summary_large_image'},
       ],
       navbar: {
@@ -117,48 +117,29 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: 'Docs',
-          //   items: [
-          //     {
-          //       label: 'Tutorial',
-          //       to: '/docs/intro',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'X',
-          //       href: 'https://x.com/docusaurus',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: 'More',
-          //   items: [
-          //     {
-          //       label: 'Journal',
-          //       to: '/blog',
-          //     },
-          //     {
-          //       label: 'GitHub',
-          //       href: 'https://github.com/facebook/docusaurus',
-          //     },
-          //   ],
-          // },
+          {
+            title: 'Navigate',
+            items: [
+              {label: 'Journal', to: '/blog'},
+              {label: 'Contact', to: '/contact'},
+            ],
+          },
+          {
+            title: 'Follow',
+            items: [
+              {
+                label: 'Instagram',
+                href: 'https://www.instagram.com/tomstimecapsule/',
+              },
+              {
+                label: 'BlueSky',
+                href: 'https://bsky.app/profile/tomstimecapsule.bsky.social',
+              },
+            ],
+          },
         ],
         logo: {
-          alt: 'ttc logo',
+          alt: 'tom\'s time capsule logo',
           src: 'img/ttc_dark.png',
           width: 50,
         },

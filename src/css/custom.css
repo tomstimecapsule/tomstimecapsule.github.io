@@ -1,65 +1,4 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #006990;
-  --ifm-color-primary-dark: #005f82;
-  --ifm-color-primary-darker: #00597a;
-  --ifm-color-primary-darkest: #004a65;
-  --ifm-color-primary-light: #00749e;
-  --ifm-color-primary-lighter: #0079a6;
-  --ifm-color-primary-lightest: #0089bb;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --navBar-color-text: #535353;
-  --pageHeader-color-text: #707070;
-  --image-overlay-1: #ffffff;
-  --image-overlay-2: #fffefe;
-  --imf--color-nav-icons: black; 
-  --imf--color-nav-icons-hover: #EBEDF0;
-  --color-contact-btn: #acadaf;
-  --color-subscribe-btn: #7db0a2;
-
-  --color-subscribe-btn-hover: #7db5c9;
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #34c7e5;
-  --ifm-color-primary-dark: #1dbfe0;
-  --ifm-color-primary-darker: #1bb4d4;
-  --ifm-color-primary-darkest: #1695ae;
-  --ifm-color-primary-light: #4dcee8;
-  --ifm-color-primary-lighter: #59d1ea;
-  --ifm-color-primary-lightest: #7fdcef;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --navBar-color-text: #535353;
-  --pageHeader-color-text: #707070;
-  --image-overlay-1: #3e3e3e;
-  --image-overlay-2: #2e2e32;
-  --imf--color-nav-icons: white; 
-  --imf--color-nav-icons-hover: #43484E;
-  --ifm-background-color: #282d32 !important;
-  --color-contact-btn: #575f68;
-  --color-subscribe-btn: #4f7c70;
-  --color-btn-fade: linear-gradient(red, yellow);
-
-  --color-subscribe-btn-hover: #006990;
-}
-
-/*   --ifm-background-color: #20472e !important; #1b1b1d */
-
-.light-mode {
-  color: black;
-}
-
-.dark-mode {
-  color: white;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 @font-face {
   font-family: 'NavItems';
@@ -71,52 +10,74 @@
 @font-face {
   font-family: 'LogoFont_SC';
   src: url('../fonts/Varickasc-y325.otf') format('truetype');
-
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-
-@import url('https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css');
-
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css");
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-
-
-.navbar{
-  padding-left: 5%;
-  padding-right: 5%;
-  
 }
 
 :root {
+  /* Design palette */
+  --color-dusty-olive: #667761;
+  --color-ebony: #545e56;
+  --color-taupe: #917c78;
+  --color-rosy-taupe: #b79492;
+  --color-alabaster-grey: #eae1df;
+
+  /* Infima primary scale (light mode — forest green) */
+  --ifm-color-primary: #3d6438;
+  --ifm-color-primary-dark: #365933;
+  --ifm-color-primary-darker: #2f4e2b;
+  --ifm-color-primary-darkest: #263f22;
+  --ifm-color-primary-light: #4d7b48;
+  --ifm-color-primary-lighter: #5e8e59;
+  --ifm-color-primary-lightest: #74a36f;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-navbar-height: 80px;
   --ifm-line-height-base: 1.65;
   --ifm-font-family-base: "ubuntu";
+
+  --navBar-color-text: #535353;
+  --pageHeader-color-text: #7a7570;
+  --color-surface: #ffffff;
+  --color-surface-soft: #eae1df;
+  --color-nav-icons: #1e201e;
+  --color-nav-icons-hover: #eae1df;
+  --color-btn-hover: #365933;
+
+  --border-radius-card: 6px;
+  --border-radius-button: 25px;
+  --h2-anchor-offset: 1.25rem;
 }
 
-/* main{
-  padding-left: 5% !important;
-  padding-right: 5% !important;
-} */
+[data-theme='dark'] {
+  /* Infima primary scale (dark mode — terracotta rose) */
+  --ifm-color-primary: #d4877a;
+  --ifm-color-primary-dark: #c27068;
+  --ifm-color-primary-darker: #af6259;
+  --ifm-color-primary-darkest: #9a5148;
+  --ifm-color-primary-light: #dc9e94;
+  --ifm-color-primary-lighter: #e3b3ab;
+  --ifm-color-primary-lightest: #eeccc8;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+  --color-surface: #2a2e2b;
+  --color-surface-soft: #1e211e;
+  --color-nav-icons: #eae1df;
+  --color-nav-icons-hover: #3a3f3b;
+  --ifm-background-color: #1e211e !important;
+  --color-btn-hover: #dc9e94;
+}
+
+.navbar {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
 .navbar-icon {
-  font-size: 1.1rem; 
-  color: var(--imf--color-nav-icons);
+  font-size: 1.1rem;
+  color: var(--color-nav-icons);
   display: flex;
   align-items: center;
-  text-decoration: none; 
-  z-index: 1; 
-}
-
-/* .navbar__logo {
-  margin-right: 0px;
-} */
-
-.navbar-icon:hover a {
-  text-decoration: none !important; /* Force removal of underline */
+  text-decoration: none;
+  z-index: 1;
 }
 
 .navbar__item a {
@@ -126,7 +87,7 @@
   justify-content: center;
   position: relative;
   border-radius: 50%;
-  width: 32px; 
+  width: 32px;
   height: 32px;
 }
 
@@ -145,10 +106,10 @@
 }
 
 .navbar__item a:hover::before {
-  background-color: var(--imf--color-nav-icons-hover); /* Light gray hover effect */
+  background-color: var(--color-nav-icons-hover);
 }
 
-.navbar__brand{
+.navbar__brand {
   align-items: center;
   justify-content: center;
   padding-left: 30px;
@@ -158,7 +119,7 @@
   padding-left: 5px;
   font-size: 1rem;
   font-weight: 500;
-  color: --navBar-color-text;
+  color: var(--navBar-color-text);
   line-height: 2rem;
   letter-spacing: 0px;
 }
@@ -171,20 +132,36 @@
   margin-bottom: 0px;
 }
 
-.margin-vert--md{
+.margin-vert--md {
   margin-top: 0rem !important;
 }
 
-.toggle_vylO{
+.toggle_vylO {
   margin-left: 15px;
 }
 
 article h2 {
   font-weight: 600;
   font-size: 1.5rem;
-  text-align: left;
-  margin-bottom: 0rem;
-  margin-top: 1rem !important;
+  margin-bottom: 0.25rem;
+  margin-top: 1.5rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+article h2::before,
+article h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.2;
+}
+
+article h2::before {
+  margin-right: var(--h2-anchor-offset);
 }
 
 article h3 {
@@ -194,11 +171,11 @@ article h3 {
   margin-bottom: 0rem;
 }
 
-header{
+header {
   flex-direction: column;
 }
 
-article .docusaurus-mt-lg{
+article .docusaurus-mt-lg {
   margin-top: .5rem;
 }
 
@@ -206,26 +183,37 @@ footer.docusaurus-mt-lg .col.text--right a {
   font-size: 1em;
 }
 
+/* Shared page title used across homepage, blog, and contact */
+.page-title {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: -2px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 450px) {
+  .page-title {
+    font-size: 2.4rem;
+  }
+}
+
 /********* Mobile adaptation *********/
+
+@media screen and (max-width: 768px) {
+  .navbar__brand {
+    padding-left: 5px;
+  }
+}
 
 @media screen and (max-width: 450px) {
   .navbar-icon {
-    font-size: .8rem; 
-    color: var(--imf--color-nav-icons);
-    display: flex;
-    align-items: center;
-    text-decoration: none; 
-    z-index: 1; 
+    font-size: .8rem;
   }
 
   p {
     font-size: .9rem;
-  }
-
-  .navbar__brand{
-    align-items: center;
-    justify-content: center;
-    padding-left: 5px;
   }
 
   ul {

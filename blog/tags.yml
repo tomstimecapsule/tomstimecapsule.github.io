@@ -1,24 +1,24 @@
 SocialMedia:
   label: Social Media
   permalink: /socialmedia
-  description: SocialMedia tag description
+  description: Thoughts on social media, algorithms, and the broader photography community online.
 
 Travel:
   label: Travel
   permalink: /travel
-  description: Travel tag description
+  description: Travel photography and journal entries from around the world.
 
 Backpacking:
   label: Backpacking
   permalink: /backpacking
-  description: Backpacking tag description
+  description: Backpacking trips, gear, and advice for travelling light.
 
 Asia:
   label: Asia
   permalink: /asia
-  description: Asia tag description
+  description: Photography and travel journal entries from across Asia.
 
 SriLanka:
   label: Sri Lanka
   permalink: /srilanka
-  description: Sri Lanka
+  description: Photography and travel journal entries from Sri Lanka.

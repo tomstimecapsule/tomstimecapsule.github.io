@@ -1,26 +1,20 @@
-.contactContainer{
+.contactContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: var(--ifm-container-width-xl);
 }
 
-.contactContainer img {
-    border-radius: 80px 20px 80px 20px;     
-    width: 100%;                                                                                      width: 50%;
-}
-
-.parentContainer{
+.parentContainer {
     display: flex;
     align-content: center;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: calc(100vh - 180px); /* adjust as needed */
+    min-height: calc(100vh - 180px);
 }
 
-
-.pageTitle{
+.pageTitle {
     margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
@@ -28,24 +22,17 @@
     font-size: 3rem;
 }
 
-.subTitle{
+.subTitle {
     margin-top: 10px;
 }
 
-
-.contactContainerSplit{
+.contactContainerSplit {
     display: flex;
     flex-direction: column;
     gap: 50px;
     width: 70%;
 }
 
-
-.contactTitle {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
 .contactForm {
     width: 100%;
     display: flex;
@@ -54,34 +41,34 @@
     margin-bottom: 20px;
     gap: 20px;
 }
-  
-.contactEntrySplit{
+
+.contactEntrySplit {
     display: flex;
     gap: 5%;
     width: 100%;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-bottom: 5px;
 }
-  
+
 .contactForm input,
 .contactForm textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: var(--border-radius-card);
     font-size: 16px;
-  }
-  
-.subscribeButton{
+}
+
+.subscribeButton {
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: var(--ifm-color-primary);
-    color: var(--image-overlay-2);
+    color: var(--color-surface-soft);
     font-weight: bold;
-    border-radius: 25px;
-    padding: 10px 30px 10px 30px;
+    border-radius: var(--border-radius-button);
+    padding: 10px 30px;
     border-color: var(--ifm-color-primary);
     border-width: 2px;
     border-style: solid;
@@ -89,71 +76,50 @@
     cursor: pointer;
 }
 
-.submitButton { 
-    background-color: var(--image-overlay-1);
-    color: var(--imf--color-nav-icons);
+.submitButton {
+    background-color: var(--color-surface);
+    color: var(--color-nav-icons);
 }
-
-.socialMediaPairing {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.socialMediaPairing p {
-    margin-bottom: 3px;
-}
-
-.socialMediaPairing i {
-    font-size: 2rem;
-}
-
-.socialMedia {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-
 
 .formConsent {
     display: block;
-    font-size: 0.6rem;
-    margin-top: 0rem;
-    color: #555;
+    font-size: 0.75rem;
+    margin-top: 0;
+    color: #777;
     width: 50%;
-  }
+    line-height: 1.5;
+}
 
 .formConsent a {
     text-decoration: underline;
     color: inherit;
 }
 
-
-@media screen and (max-width: 450px) {
-    .contactEntrySplit{
-        display: flex;
-        flex-direction: column;
-        gap: 5%;
-        width: 100%;
-        justify-content: space-between; 
-        margin-bottom: 5px;
+@media screen and (max-width: 768px) {
+    .contactContainerSplit {
+        width: 85%;
     }
 
-    .contactContainer{
+    .formConsent {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contactEntrySplit {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .contactContainer {
         width: var(--ifm-container-width-s);
     }
 
-    .subTitle{
+    .subTitle {
         width: 70%;
     }
 
     .formConsent {
-        display: block;
-        font-size: 0.6rem;
-        margin-top: 0rem;
-        color: #555;
-        width: 80%;
+        width: 90%;
     }
-  }
-
+}
