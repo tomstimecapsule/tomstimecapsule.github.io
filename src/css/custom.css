@@ -199,6 +199,78 @@ footer.docusaurus-mt-lg .col.text--right a {
   }
 }
 
+/********* Pull Quote *********/
+
+.pullquote {
+  margin: 2rem auto;
+  max-width: 80%;
+  text-align: center;
+  padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.pullquote::before {
+  content: '\201C';
+  display: block;
+  font-size: 7rem;
+  line-height: 0.75;
+  color: var(--ifm-color-primary);
+  opacity: 0.3;
+  font-family: Georgia, 'Times New Roman', serif;
+  margin-bottom: -0.5rem;
+}
+
+.pullquote p {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.pullquote .pullquote-attr {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 768px) {
+  .pullquote {
+    max-width: 95%;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  article h2 {
+    display: block;
+    text-align: left;
+  }
+
+  article h2::before,
+  article h2::after {
+    content: none;
+  }
+}
+
+/********* Citations *********/
+
+.cite-bibliography {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cite-bibliography .csl-entry {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.cite-bibliography .cite-num {
+  flex-shrink: 0;
+  min-width: 2rem;
+}
+
 /********* Mobile adaptation *********/
 
 @media screen and (max-width: 768px) {

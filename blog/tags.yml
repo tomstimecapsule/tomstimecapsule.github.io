@@ -3,6 +3,11 @@ SocialMedia:
   permalink: /socialmedia
   description: Thoughts on social media, algorithms, and the broader photography community online.
 
+Perspective:
+  label: Perspective
+  permalink: /perspective
+  description: Perspective pieces on broader issue topics.   
+
 Travel:
   label: Travel
   permalink: /travel

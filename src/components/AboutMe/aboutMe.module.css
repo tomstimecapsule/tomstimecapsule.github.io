@@ -1,5 +1,7 @@
 .sectionContainer {
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -19,6 +21,8 @@
 .profileText {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     flex: 1;
     gap: 12px;
 }
@@ -33,7 +37,7 @@
 .paragraph {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
 }
 
 .paragraph p {
@@ -49,6 +53,7 @@
 .buttonSep {
     gap: 12px;
     display: flex;
+    justify-content: center;
     margin-top: 0px;
 }
 
@@ -95,9 +100,11 @@
     .sectionContainer {
         flex-direction: column;
         gap: 20px;
+        padding: 0 1.25rem;
     }
 
     .sectionContainer img {
+        order: -1;
         border-radius: 50% 2% 50% 2%;
         max-width: 65%;
     }

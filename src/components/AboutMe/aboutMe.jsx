@@ -12,7 +12,7 @@ export default function AboutMe() {
                         <p>My name is Tom, a landscape, travel, and lifestyle photographer based in Bavaria, Germany.</p>
                         <p>Alongside the gallery you'll find a journal covering travel, gear, and my thoughts on photography.</p>
                     </div>
-                    <p className={styles.tagline}><em>"Time is not our greatest resource — attention is."</em></p>
+                    <p className={styles.tagline}><em>Time is not our greatest resource — attention is.</em></p>
                     <div className={styles.buttonSep}>
                         <a className={styles.buttonLike} href="/blog">Journal <i className="fa-regular fa-pen-to-square"></i></a>
                         <a className={`${styles.buttonLike} ${styles.subscribeButtonLike}`} href="/contact">Contact <i className="fa-regular fa-bell"></i></a>
