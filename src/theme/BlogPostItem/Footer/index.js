@@ -1,11 +1,18 @@
 import React from 'react';
 import clsx from 'clsx';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import {useBlogPost} from '@docusaurus/plugin-content-blog/client';
 import {ThemeClassNames} from '@docusaurus/theme-common';
 import EditMetaRow from '@theme/EditMetaRow';
 import TagsListInline from '@theme/TagsListInline';
 import ReadMoreLink from '@theme/BlogPostItem/Footer/ReadMoreLink';
 import BlogEndBar from "@site/src/customizations/BlogEndBar";
+
+// Firestore doc IDs can't contain "/", so turn the permalink into a safe,
+// stable, unique key (e.g. "/mimetic" -> "mimetic", "/blog/2025/x" -> "blog-2025-x").
+function toReactionSlug(permalink) {
+  return permalink.replace(/^\/+|\/+$/g, '').replace(/\//g, '-') || 'home';
+}
 
 export default function BlogPostItemFooter() {
   const {metadata, isBlogPostPage} = useBlogPost();
@@ -20,7 +27,9 @@ export default function BlogPostItemFooter() {
   // A post is truncated if it's in the "list view" and it has a truncate marker
   const truncatedPost = !isBlogPostPage && hasTruncateMarker;
   const tagsExists = tags.length > 0;
-  const renderFooter = tagsExists || truncatedPost || editUrl;
+  // Always render the footer on a full post page so reactions show even when
+  // the post has no tags / edit link.
+  const renderFooter = tagsExists || truncatedPost || editUrl || isBlogPostPage;
   if (!renderFooter) {
     return null;
   }
@@ -53,6 +62,14 @@ export default function BlogPostItemFooter() {
             lastUpdatedBy={lastUpdatedBy}
           />
         )}
+        {/* Reactions are client-only: the firebase module must not run during SSR. */}
+        <BrowserOnly>
+          {() => {
+            const BlogReactions =
+              require('@site/src/components/BlogReactions').default;
+            return <BlogReactions slug={toReactionSlug(metadata.permalink)} />;
+          }}
+        </BrowserOnly>
       </footer>
     );
   }
@@ -75,6 +92,14 @@ export default function BlogPostItemFooter() {
           </div>
         )}
       </footer>
+        {/* Same slug as the post page, so reactions are shared between views. */}
+        <BrowserOnly>
+          {() => {
+            const BlogReactions =
+              require('@site/src/components/BlogReactions').default;
+            return <BlogReactions slug={toReactionSlug(metadata.permalink)} />;
+          }}
+        </BrowserOnly>
         {
           !isBlogPostPage && <BlogEndBar />
         }

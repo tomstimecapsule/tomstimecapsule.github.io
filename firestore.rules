@@ -1,0 +1,31 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Public emoji reactions — one document per post slug, e.g. reactions/mimetic.
+    match /reactions/{slug} {
+
+      // Counts are public.
+      allow read: if true;
+
+      // First reaction on a post creates the document (cap the number of
+      // distinct emojis so nobody can stuff it with junk keys).
+      allow create: if request.resource.data.keys().size() <= 12;
+
+      // Later writes may change at most ONE emoji counter per write and may
+      // never remove existing counters (so no one can wipe others' reactions).
+      allow update: if request.resource.data.diff(resource.data)
+                          .affectedKeys().size() <= 1
+                    && request.resource.data.keys().hasAll(resource.data.keys());
+
+      // No deletions.
+      allow delete: if false;
+    }
+
+    // Everything else is locked down.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
