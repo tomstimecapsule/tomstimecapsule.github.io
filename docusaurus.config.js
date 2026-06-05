@@ -123,6 +123,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/social_16_9.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        // Ignore the visitor's OS dark-mode preference; always start in light.
+        respectPrefersColorScheme: false,
+      },
       metadata: [
         {name: 'keywords', content: "photography journal, blog, tom's time capsule"},
         {name: 'twitter:card', content: 'summary_large_image'},
